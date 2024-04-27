@@ -27,23 +27,11 @@
         <div class="submit">
             <button>Create an Account</button>
         </div>
-       <!--  <div>
-            <input type="checkbox" value="shaun" v-model="names">
-            <label for="">Shaun</label>
-        </div>
-        <div>
-            <input type="checkbox" value="yoshi"  v-model="names">
-            <label for="">Yoshi</label>
-        </div>
-        <div>
-            <inpu  type="checkbox" value="mario"  v-model="names">
-            <label for="">Mario</label>
-        </div> -->
 
   </form>
 
 
-  <p>Email: {{email}}, Password: {{password}}, Role:{{role}}, Terms:{{terms}}, Names:{{names}}, Skills: {{skills}}</p>
+  
 </template>
 
 <script>
@@ -79,7 +67,7 @@ export default {
         handleSubmit(){
             this.emailError = this.email.includes('@gmail.com') ? '' : 'Write a valid email!'
             this.passwordError = this.password.length>5 ? '' : 'Password must be at least 6 chars long!'
-            if(!this.passwordError&&!this.emailError){
+            if(!this.passwordError&& !this.emailError){
             console.log('email: ', this.email)
             console.log('password: ', this.password)
             console.log('role: ', this.role)
